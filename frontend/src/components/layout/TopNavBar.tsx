@@ -8,7 +8,8 @@ export default function TopNavBar() {
     };
 
     return (
-        <nav className="top-nav-bar">
+        <nav className="top-nav-bar bg-gradient-to-r from-blue-400/80 to-indigo-500/80 backdrop-blur-md">
+
             <div className="menu-icon" onClick={toggleMenu}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +32,7 @@ export default function TopNavBar() {
                     </ul>
                 </div>
             )} */}
-            <div className="nav-title item-justified item-center">Embedded Software Testing</div>
+            <div className="nav-title item-justified item-center text-white text-xl font-bold">Software Testing</div>
         </nav>
     );
 }

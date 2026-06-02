@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import '../App.css' // Import App.css for global styles
 
 export default function HomePage() {

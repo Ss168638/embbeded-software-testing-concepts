@@ -1,83 +1,57 @@
-Here is the complete software quality and testing pipeline structured as an end-to-end operational flowchart. This map traces how a project moves from initial requirements through static analysis, steps through the progressive levels of testing, and applies the specific methodologies and metrics you have documented.
+# Software quality and testing pipeline
 
-### **The Software Quality & Testing Flowchart**
+This overview maps the testing topics in this study guide from requirements through release. The sequence is illustrative; teams may adapt it to their development process.
 
-Plaintext  
- \[1. Requirements & Specifications\]   
-                │  
-                ▼  
- \[2. Static Verification\] ───────► (Code Walkthroughs & Inspections)  
-                │  
-                ▼  
- \[3. Dynamic Validation Pipeline\]   
-                │  
-                ├─► Level A: Unit Testing ─────────► (White-Box / Internal Logic)  
-                │  
-                ├─► Level B: Integration Testing ──► (Module Interfaces / Stubs & Drivers)  
-                │  
-                ├─► Level C: System Testing ───────► (Black-Box, Functional & Robustness)  
-                │  
-                └─► Level D: Acceptance Testing ───► (Alpha & Beta / Customer Sign-off)  
-                │  
-                ▼  
- \[4. Operational Release\] ◄────── Measured by Metrics (Direct & Indirect)
+## 1. Requirements and specifications
 
-### **Detailed Step-by-Step Flow**
+Start with software specifications and user requirements. Testing aims to find hidden defects and verify conformance, not merely to demonstrate successful behavior.
 
-### **Step 1: Requirements & Foundations**
+## 2. Static verification
 
-* **Input Spec:** Everything originates from software specifications and user requirements.  
-* **Goal Mapping:** The primary objective established here is to expose hidden defects and verify conformance, rather than just demonstrating correct performance.
+Review work products before executing the software:
 
-### **Step 2: Static Verification (Before Execution)**
+- **Informal analysis:** Code walkthroughs.
+- **Formal analysis:** Code inspections.
+- **V&V review:** Examine documents, code, and traceability to assess whether the product is being built according to its requirements.
 
-Before any code is actually executed, the software undergoes static analysis to catch errors early:
+## 3. Dynamic testing
 
-* **Informal Analysis Flow:** Code Walkthroughs are conducted.  
-* **Formal Analysis Flow:** Formal Code Inspections are performed.  
-* **V\&V Review Gate:** Documents, code, and traceability are analyzed to ensure the product is being built correctly.
+Test progressively from individual components to the complete system.
 
-### **Step 3: Dynamic Validation Pipeline (Execution)**
+### Unit testing
 
-Once the code is compiled, it flows through the **V-Model execution pipeline**, moving from "Testing in Small" to "Testing in Large":
+Test individual components in isolation. White-box techniques examine internal structure:
 
-#### **Level A: Unit Testing (Testing in Small)**
+- **Control flow:** Measure statement, branch, condition, and path coverage.
+- **Data flow:** Trace variables from definition to use through definition-use (DU) pairs, including computational-use (CU) and predicate-use (PU) pairs.
+- **Mutation testing:** Make small changes to a program and check whether tests detect the resulting behavioral differences.
 
-* **Scope:** Individual components are isolated and tested independently.  
-* **Methodology (White-Box Testing):** Testers look directly at the internal code mechanism.  
-  * *Control Flow Path:* Code passes through Statement, Branch, Condition, and Path coverage goals.  
-  * *Data Flow Path:* Variables are tracked from definition to usage via DU and CU pairs.  
-  * *Mutation Path:* Small code alterations (mutants) are introduced to verify that test cases can successfully catch them.
+### Integration testing
 
-#### **Level B: Integration Testing (Testing in Large)**
+Combine modules into subsystems and check their interfaces:
 
-* **Scope:** Individual modules are combined into sub-systems to uncover interface errors.  
-* **Execution Paths:**  
-  * *Top-Down Path:* Functions are verified early using code stubs.  
-  * *Bottom-Up Path:* Functions are checked at the end using code drivers.  
-  * *Sandwich (Hybrid) Path:* Top-level and bottom-level modules are integrated simultaneously to test functionality and interfaces efficiently at the same time.
+- **Top-down:** Use stubs to test higher-level modules early.
+- **Bottom-up:** Use drivers to test lower-level modules before integrating higher-level modules.
+- **Sandwich (hybrid):** Integrate from both ends.
 
-#### **Level C: System Testing**
+### System testing
 
-* **Scope:** Sub-systems are completely integrated to validate full functional and non-functional execution.  
-* **Functional Flow (Black-Box Testing):** Software behavior, inputs, and outputs are tested strictly against specifications without source code access.  
-  * *Techniques Used:* Equivalence Partitioning, Boundary Value Analysis, Cause-Effect Graphs, State Transitioning, and Use Case testing.  
-* **Non-Functional Flow:** The system is pushed to its operational boundaries.  
-  * *Environment Testing:* Evaluation via Load, Stress, Smoke, Sanity, Regression, and Volume testing.  
-  * *Robustness Branch:* Systems are evaluated on their ability to handle unexpected environmental failures gracefully.  
-  * *Robustness Methods:* Handled via Boundary Value Expansion or Fault Injection (Error Seeding formulas to calculate hidden non-seeded errors).
+Test the integrated system against its functional and non-functional requirements:
 
-#### **Level D: Acceptance Testing**
+- **Functional testing:** Black-box techniques test inputs and outputs against specifications. Examples include equivalence partitioning, boundary value analysis, cause-effect graphing, state transition testing, and use case-based testing.
+- **Non-functional testing:** Methods include load, stress, smoke, sanity, regression, volume, and robustness testing.
+- **Robustness testing:** Evaluate behavior under invalid inputs, extreme conditions, or environmental failures. Methods include boundary value expansion and fault injection.
 
-* **Scope:** The final testing phase before the system is formally accepted for live operations.  
-* **Audience:** Tested directly by the customer to uncover gaps or omissions in requirements.  
-* **Deployment Flow:**  
-  * *Alpha Branch:* Executed at the developer's site within a controlled environment where developers can observe usage.  
-  * *Beta Branch:* Executed at the customer's site in an uncontrolled environment where users report issues at regular intervals.
+### Acceptance testing
 
-### **Step 4: Operational Release & Continuous Measurement**
+The customer or end users evaluate whether the system is ready for operational use:
 
-As the software moves into operational use, the pipeline loops into continuous evaluation using quality metrics:
+- **Alpha testing:** Takes place at the developer's site in a controlled environment, often with developers observing use.
+- **Beta testing:** Takes place at the customer's site; users report problems from an environment not controlled by the developer.
 
-* **Direct Quality Evaluation:** Tracks tangible metrics like Lines of Code (LOC), Defect Density, Test Pass Rates, and Schedule Variance.  
-* **Indirect Quality Evaluation:** Measures experiential attributes like Efficiency, Reliability, Complexity, and Maintainability.
+## 4. Release and measurement
+
+After acceptance, release the software for operational use. Continue to assess quality using metrics:
+
+- **Direct metrics:** Size (LOC or FP), cost, defect density, test pass rate, time to fix defects, requirements coverage, effort variance, and schedule variance.
+- **Indirect metrics:** Efficiency, productivity, reliability, functionality, complexity, and maintainability.

@@ -1,18 +1,26 @@
-# Verificatin & Validation (V&V)
-TBD
-# What is Verification?
-TBD
-# What is Validation?
-TBD
+# Verification and validation (V&V)
 
-# Stages of V&V
-- Review: Document Review / Code Review / Object Code Review
-- Analysis: Functionality Analysis / Traceability Analysis
-- Test: High-Level Test / Low-Level Test
+Verification and validation are complementary activities used to assess whether a software product is being built correctly and whether it meets user needs.
 
-## Functinal Test
-- Requirement-Based Test
-- Target-Based Test
+## What is verification?
 
-## Non-Functional Test
-- Robustness Test
+Verification checks work products against specified requirements. It asks, “Are we building the product right?” Reviews, inspections, and analysis can find issues without executing the software.
+
+## What is validation?
+
+Validation evaluates whether the software meets its intended use and user needs. It asks, “Are we building the right product?” Testing the running software is a primary validation activity.
+
+## Stages of V&V
+
+- **Review:** Review documents, source code, and object code.
+- **Analysis:** Analyze functionality and traceability between requirements and work products.
+- **Testing:** Run high-level and low-level tests.
+
+## Functional testing
+
+- Requirement-based testing
+- Target-based testing
+
+## Non-functional testing
+
+- Robustness testing

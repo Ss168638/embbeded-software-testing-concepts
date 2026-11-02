@@ -1,46 +1,59 @@
-# Software Testing
+# Software testing
 
-## What is Testing
-"The process of executing a program or system with the intent of finding errors. [Myers, 79]"
+## What is testing?
 
-## Objective of Testing
-"Primary objective of testing is not demonstration of correct performance but the exposer of hidden defects. [Myers]"
+> “The process of executing a program or system with the intent of finding errors.” — Myers (1979)
 
-## Why Test?
-- To verify conformance to the requirements
-- To find all defects in a product
+## Objective of testing
 
-## Software Testing Techniques
-### 1. Black Box
-- Testing of system or component whose input, output and general function are known, but whose contents or implementation are unknown or irrelevent.
-- Test to Spec
-### 2. White Box
-- Testing that takes into account internal mechanism of a system or component, typically includes - Branch Testing/Path Testing/Glass Testing/White Box Testing
-- Test to the Code
+The primary objective of testing is not to demonstrate correct performance, but to expose hidden defects.
 
-## Levels of Testing
-- Unit Testing
-    - *individual components are tested to ensure that they operate correctly.*
-    - *each component is tested independently, without other system component.*
-- Integration Testing
-    - *tests collection of modules which have integrated into the sub-systems.*
-    - *detection of module intergace errors*
-- System Testing
-    - *sub-systems are integrated to make up the system.*
-    - *finds erros resulted form sub-system interface problems.*
-    - *validated systems functional and non-functional requirements.*
-- Acceptance Testing
-    - *final stage of testing process before the systems is accepted for operational use.*
-    - *tested by customer.*
-    - *reveals errors and omissions in the system requriements.*
+## Why test?
 
-## Barriers to complete Testing
-- Correctness of the specification is suspect.
-- Automatic verification of every program is theoretically impossible.
-- Verification of the verification system is impossible.
-- Complete functional testing may be impracticle if input data space is large.
-- Complete structural testing may be impracticle or impossible.
+- To verify conformance to requirements.
+- To find defects in a product.
 
+## Software testing techniques
 
+### Black-box testing
 
+- Tests a system or component through its known inputs, outputs, and functions without relying on knowledge of its implementation.
+- Also known as testing against the specification.
 
+### White-box testing
+
+- Tests a system or component with consideration of its internal mechanisms and structure.
+- May include statement, branch, and path testing.
+- Also known as structural or glass-box testing.
+
+## Levels of testing
+
+### Unit testing
+
+- Tests individual components to check that they operate correctly.
+- Tests each component independently from the rest of the system.
+
+### Integration testing
+
+- Tests modules combined into subsystems.
+- Helps detect errors at module interfaces.
+
+### System testing
+
+- Tests the complete system after its subsystems have been integrated.
+- Helps identify errors caused by subsystem interactions.
+- Validates functional and non-functional requirements.
+
+### Acceptance testing
+
+- The final testing stage before a system is accepted for operational use.
+- Usually performed by the customer or end users.
+- Helps reveal errors or omissions in the system requirements.
+
+## Barriers to complete testing
+
+- The correctness of the specification may be uncertain.
+- Automatically verifying every program is theoretically impossible.
+- The verification system itself cannot be verified completely.
+- Complete functional testing may be impractical when the input space is large.
+- Complete structural testing may be impractical or impossible.

@@ -1,54 +1,48 @@
-# White-Box Testing
-- is a software testing technique that focuses on the internal logic and structure of the software.
-- tester has access to the code
-- main objective is code coverage/statement coverage/branch coverage/path coverage
-- is also known as structural testing/glass-box testing
+# White-box testing
 
-## White Box Testing Methologies
-1. Control Flow Testing
-2. Data Flow Testing
-3. Mutation Testing
+- Examines a system's internal logic and structure.
+- Requires access to the code or design.
+- Often measures structural coverage, such as statement, branch, condition, and path coverage.
+- Also known as structural testing or glass-box testing.
 
-## Control Flow Testing
-### Statement Coverage 
-- 100% of the statement in code must be executed **at least once**
+## White-box testing methodologies
 
-### Branch Coverage/Decision Coverage 
-- Branch like if...else, while, do-while etc. are to be evaluated for both true and false (T/F).
+1. Control flow testing
+2. Data flow testing
+3. Mutation testing
 
-### Condition Coverage
-- All conditions should be executed at least once
-- Conditions using relational and logical operators should be checked for all possible outcomes
-- Multiple conditions should be checked in such a manner that each condition becomes true at least once.
+## Control flow testing
 
-### Multiple Condition Coverage
-- In some cases there may be multiple conditions in the decisions
-- consider combination of these condition for deriving test cases
-- in all cases optimize on the number of test cases so that the same number of test cases will help get more coverage
+### Statement coverage
 
-### Path Coverage
-- Every statement exercised at least once
-- Every decision exercised over all outcomes
+Measures whether each executable statement has run at least once.
 
-## Data Flow Testing
-- Structural Testing Technique
-- Execute sub-path from definition to use
-- Sub-paths are known as definition use pairs (du)
-- Definition of variable and usage verified (du)
-- All **c**omputational **u**sage is called cu pair
-- All **p**redicate **u**sage is called pu pair
+### Branch (decision) coverage
 
-### DU pair
-- Consists of 2 values 
-    - Definition value 
-    - Corresponding usage value
-### CU pair
-- consists of 2 values
-    - computational operations
-    - its corresponding number of usage
+Measures whether each decision outcome, such as true and false for an `if` statement, has been exercised.
 
-## Mutation Testing
-- A structural test approach
-- Creates mutants of a program by making small changes to code called **mutatnts**
-- During testing each mutant will produce an output different from original output
-- Requirement is that the set of the test cases be able to differentiate between original and mutant
+### Condition coverage
+
+Measures whether each Boolean condition has evaluated to both true and false. For decisions with multiple conditions, each condition is considered independently.
+
+### Multiple condition coverage
+
+Measures combinations of condition outcomes in a decision. The required combinations depend on the selected coverage criterion.
+
+### Path coverage
+
+Measures execution of paths through the control-flow graph. Complete path coverage may be infeasible when loops create an unbounded number of paths.
+
+## Data flow testing
+
+- Examines paths from a variable's definition to its use.
+- A definition-use (DU) pair connects a definition of a variable to a reachable use of that definition.
+- A computational use (CU) occurs when a variable's value is used in a computation.
+- A predicate use (PU) occurs when a variable's value is used in a condition that controls program flow.
+
+## Mutation testing
+
+- Creates program variants, called mutants, by making small changes to the original code.
+- Runs the test suite against each mutant.
+- A test suite detects (or “kills”) a mutant when its results distinguish the mutant from the original program.
+- Equivalent mutants behave the same as the original for all relevant inputs and may not be detectable by tests.

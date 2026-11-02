@@ -1,17 +1,20 @@
-# Black-Box Testing
-- is a software testing technique that examines the software functionality without considering its internal code structure
-- no access to source code
-- relies on software speficitations and requirements
-- focuses on validating software behaviour, input and output
+# Black-box testing
 
-## Balck-box testing methadologies
-- Equivalance partitioning 
-- Boundary Value Analysis
-- Cause-Effect Graph
+- Examines software functionality without considering its internal code structure.
+- Does not require access to the source code.
+- Relies on software specifications and requirements.
+- Focuses on validating software behavior, inputs, and outputs.
+
+## Black-box testing methodologies
+
+- Equivalence partitioning
+- Boundary value analysis
+- Cause-effect graphing
 - State transition testing
-- Use Case bases testing
+- Use case-based testing
 
-## Types of Black-box testing
+## Types of black-box testing
+
 - Integration testing
 - System testing
 - Acceptance testing

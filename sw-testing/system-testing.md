@@ -1,19 +1,21 @@
-# System Testing
-- *sub-systems are integrated to make up the system.*
-- *finds erros resulted form sub-system interface problems.*
-- *validated systems functional and non-functional requirements.*
+# System testing
 
-# Methods
-- Load Test
-- Stress Test
-- Sanity Test
-- Smoke Test
-- Chaos Test
-- Regression Test
-- Volume Test
-- Facility Test
-- Usability Test
-- Security Test
-- Storage Test
-- Recovery Test
-- Procedural Test
+- Tests the complete system after its subsystems have been integrated.
+- Helps identify errors caused by interactions between subsystems.
+- Validates the system's functional and non-functional requirements.
+
+## Methods
+
+- Load testing
+- Stress testing
+- Sanity testing
+- Smoke testing
+- Chaos testing
+- Regression testing
+- Volume testing
+- Facility testing
+- Usability testing
+- Security testing
+- Storage testing
+- Recovery testing
+- Procedural testing

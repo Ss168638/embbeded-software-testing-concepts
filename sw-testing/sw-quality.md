@@ -1,15 +1,18 @@
-# Software Quality
+# Software quality
+
 ## Testing
-1. Testing in Small
-    - White-Box Testing
-    - Black-Box Testing
-2. Testing in Large
-    - Module Testing 
-    - Integration Testing
-    - System Testing
+
+1. **Testing in the small**
+   - White-box testing
+   - Black-box testing
+2. **Testing in the large**
+   - Module testing
+   - Integration testing
+   - System testing
 
 ## Analysis
-1. Informal Analysis
-    - Code Walkthrough
-2. Formal Analysis
-    - Code Inspection
+
+1. **Informal analysis**
+   - Code walkthrough
+2. **Formal analysis**
+   - Code inspection
